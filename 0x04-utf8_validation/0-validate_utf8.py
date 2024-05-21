@@ -7,7 +7,6 @@ def validUTF8(data):
     method that determines if a given data set
     represents a valid UTF-8 encoding
     """
-
     nbytes = 0
 
     b1 = 1 << 7
@@ -25,5 +24,6 @@ def validUTF8(data):
                 return False
         else:
             if not (i & b1 and not (i & b2)):
-                nbytrs -= 1
+                return False
+        nbytes -= 1
     return nbytes == 0
