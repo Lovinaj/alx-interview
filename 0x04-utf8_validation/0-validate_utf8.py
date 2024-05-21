@@ -25,6 +25,5 @@ def validUTF8(data):
                 return False
         else:
             if not (i & b1 and not (i & b2)):
-                nbytrs -= 1 
-                
+                nbytrs -= 1
     return nbytes == 0
